@@ -1,0 +1,41 @@
+# Sensitive Packer files
+secrets.pkrvars.hcl
+packer/http/user-data
+*.pkrvars.hcl
+
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Crash log files
+crash.log
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+credentials.auto.tfvars
+
+# .terraform directory
+.terraform/
+terraform/.terraform.lock.hcl
+terraform/.terraform.tfstate.lock.info
+
+# Sensitive files
+*.pem
+*.key
+*.crt
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Editor/OS files
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+.idea/
