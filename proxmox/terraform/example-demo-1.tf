@@ -1,10 +1,11 @@
-resource "proxmox_vm_qemu" "srv-demo-1" {
-    name = "srv-demo-1"
+resource "proxmox_vm_qemu" "example-demo-1" {
+    name = "example-demo-1"
     desc = "Ubuntu Server 24.04 LTS"
 
     agent = 1
     target_node = var.PROXMOX_NODE
-    vmid = var.VM_ID    
+    vmid = var.VM_ID
+    tags = "terraform"    # for multiple tags, use a single string with comma-separated tags, e.g. "tag1,tag2"
 
     clone = var.VM_TEMPLATE
     full_clone = true
